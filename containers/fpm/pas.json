@@ -1,0 +1,12 @@
+{
+    "name": "reekoheek/docker-php-fpm",
+    "profile": "docker",
+
+    "docker": {
+        "containers": {
+            "root": {
+
+            }
+        }
+    }
+}

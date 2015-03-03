@@ -1,0 +1,31 @@
+{
+    "name": "reekoheek/docker-web-arch",
+    "profile": "docker",
+
+    "docker": {
+        "containers": {
+            "fpm": {
+                "volumesFrom": [
+                    "nginx"
+                ],
+                "links": [
+                    "mongo"
+                ]
+            },
+            "nginx": {
+                "ports": [
+                    "80:80"
+                ],
+                "links": [
+                    "fpm"
+                ],
+                "volumes": [
+                    "./srv:/srv"
+                ]
+            },
+            "mongo": {
+                "image": "mongo"
+            }
+        }
+    }
+}

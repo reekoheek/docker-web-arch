@@ -6,8 +6,8 @@
     "docker": {
         "containers": {
             "fpm": {
-                "volumesFrom": [
-                    "nginx"
+                "volumes": [
+                    "./srv:/srv"
                 ],
                 "links": [
                     "mongo"
